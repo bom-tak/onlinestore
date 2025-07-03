@@ -1,5 +1,13 @@
 <?php
 
+session_start();
+
+if(!isset($_SESSION["username"])){
+    $_SESSION["error"] = true;
+    header("location:index.php");
+    exit;
+}
+
 if(isset($_GET['id'])){
     $id = $_GET['id'];
 
