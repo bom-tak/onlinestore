@@ -31,6 +31,10 @@ $res = mysqli_query($conn,$sql);
     </style>
 </head>
 <body>
+    <?php if( isset($_SESSION["error"]) == true):?>
+        <p>You have to login to buy any item in the store</p>
+        <?php unset($_SESSION["error"]); ?>
+    <?php endif;?>
     <?php if(!isset($_SESSION["username"])):?>
         <p>
             you are did not log in, <a href="login.php">Login</a>
