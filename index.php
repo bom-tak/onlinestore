@@ -37,7 +37,7 @@ $res = mysqli_query($conn,$sql);
     <?php endif;?>
     <?php if(!isset($_SESSION["username"])):?>
         <p>
-            you are did not log in, <a href="login.php">Login</a>
+            Your are not logged in yet, <a href="login.php">Login</a>
         </p>
     <?php elseif($_SESSION["type"] == "seller"): ?>
             <a href="seller.php"><button>Dashboard</button></a><br><br>
